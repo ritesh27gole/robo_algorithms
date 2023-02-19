@@ -5,11 +5,20 @@ import random
 import math
 
 grid = np.load('occupancyGrid.npy')
-start = np.array([100.0, 100.0]) #(x,y)
-goal = np.array([1600.0, 750.0]) #(x,y)
+
+print("Welcome to implementation of RRT Path Planning Algorithm! \n")
+print("The size of current maze (x,y) is: ", grid.shape[1]," X ", grid.shape[0])
+start_x = float(input("Enter x coordinate of the starting point: "))
+start_y = float(input("Enter y coordinate of the starting point: "))
+goal_x = float(input("Enter x coordinate of the goal point: "))
+goal_y = float(input("Enter y coordinate of the goal point: "))
+
+start = np.array([start_x, start_y]) #(x,y)
+goal = np.array([goal_x, goal_y]) #(x,y)
 numIterations = 200
 stepSize = 100
 goalRegion = plt.Circle((goal[0], goal[1]), stepSize, color='b', fill = False)
+startRegion = plt.Circle((start[0], start[1]), stepSize, color='g', fill = False)
 
 fig = plt.figure("RRT Algorithm")
 plt.imshow(grid, cmap='binary')
@@ -17,6 +26,7 @@ plt.plot(start[0],start[1],'ro')
 plt.plot(goal[0],goal[1],'bo')
 ax = fig.gca()
 ax.add_patch(goalRegion)
+ax.add_patch(startRegion)
 plt.xlabel('X-axis $(m)$')
 plt.ylabel('Y-axis $(m)$')
 
@@ -119,8 +129,8 @@ while Node_list[-1].x != goal_node.x and Node_list[-1].y != goal_node.y:
     nearest_node.children.append(steered_node)
     Node_list.append(steered_node)
     plt.plot(steered_point[0],steered_point[1],'ro')
-    print(i)
 
 solution = retracePath(Node_list)
 plotWaypoints()
+print(start)
 plt.show()
