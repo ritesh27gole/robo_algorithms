@@ -24,3 +24,4 @@ The pre-loaded occupancy grid can be seen on: https://github.com/ritesh27gole/ro
 
 Enter the starting as goal point coordinates when asked, don't put coordinates that would end up on obstacles
 
+After running the script we get a matplotlib plot in which the nodes highlighted by green and blue ring respectively are the start and goal, whereas the dotted green line gives the path found by the algorithm
