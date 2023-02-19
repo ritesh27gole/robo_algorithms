@@ -25,4 +25,5 @@ This is the pre-loaded occupancy grid:
 ![occupancy_grid](https://user-images.githubusercontent.com/83658560/219943838-73637cb4-1019-4958-8207-e05cd6491abc.png)
 
 Enter the starting as goal point coordinates as shown below, don't put coordinates that would end up on obstacles
+
 ![terminal_screenshot](https://user-images.githubusercontent.com/83658560/219943849-a6565287-da28-412a-aaa6-1d8381c1a60c.png)
