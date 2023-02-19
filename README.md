@@ -36,4 +36,4 @@ After running the script we get:
 
 ![path](https://user-images.githubusercontent.com/83658560/219960438-e7d92885-6ec2-40ff-b006-f97c95fe293f.png)
 
-Here nodes highlighted by green and blue ring respectively are the start and goal
+Here nodes highlighted by green and blue ring respectively are the start and goal, whereas the dotted green line gives the path found by the algorithm
