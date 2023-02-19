@@ -20,7 +20,7 @@ In terminal:
 cd <-path to the RRT folder->
 python3 rrt.py
 
-The pre-loaded occupancy grid can be seen on: https://github.com/ritesh27gole/robo_algorithms
+The pre-loaded occupancy grid can be seen on: https://github.com/ritesh27gole/robo_algorithms/blob/main/README.md
 
 Enter the starting as goal point coordinates when asked, don't put coordinates that would end up on obstacles
 
