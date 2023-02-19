@@ -7,6 +7,11 @@ RRT is one of most popular algorithms used for path planning for autonomous vehi
 
 Open the "RRT" Folder to find "rrt.py" script and "occupancyGrid.npy" array which resembles a map of room consisting of obstacles
 
+Firstly clone this repository using: 
+```
+git clone https://github.com/ritesh27gole/robo_algorithms.git
+```
+
 ### Dependencies:
 Tested for:  
 1. Python (version: 3.8.10)
@@ -15,6 +20,7 @@ Tested for:
 
 You can download the dependencies by entering the following command in terminal
 ```
+cd <-path to the RRT folder->
 pip install -r requirements.txt
 ```
 ### How to run:
