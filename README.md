@@ -11,8 +11,11 @@ Open the "RRT" Folder to find "rrt.py" script and "occupancyGrid.npy" array whic
 Tested for:  
 1. Python (version: 3.8.10)
 2. Numpy (version: 1.24.2)
-3. Matplotlib (version: 3.7.0)
-
+3. Matplotlib (version: 3.7.0)  
+You can download the dependencies by entering the following command in terminal
+```
+pip install -r requirements.txt
+```
 ### How to run:
 Download the "RRT" folder and copy the path to this folder
 
