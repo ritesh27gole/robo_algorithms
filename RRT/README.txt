@@ -8,18 +8,18 @@ Tested for:
 1. Python (version: 3.8.10)
 2. Numpy (version: 1.24.2)
 3. Matplotlib (version: 3.7.0)  
-You can download the dependencies by entering the following command in terminal
-```
+You can download the dependencies by entering the following command in terminal:
+
 pip install -r requirements.txt
-```
+
 ### How to run:
 Download the "RRT" folder and copy the path to this folder
 
 In terminal:
-```
+
 cd <-path to the RRT folder->
 python3 rrt.py
-```
+
 The pre-loaded occupancy grid can be seen on: https://github.com/ritesh27gole/robo_algorithms
 
 Enter the starting as goal point coordinates when asked, don't put coordinates that would end up on obstacles
