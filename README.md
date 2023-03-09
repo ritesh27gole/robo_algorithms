@@ -32,16 +32,13 @@ cd <-path to the RRT folder->
 python3 rrt.py
 ```
 This is the pre-loaded occupancy grid:
-![occupancy_grid](https://user-images.githubusercontent.com/83658560/219943838-73637cb4-1019-4958-8207-e05cd6491abc.png)
+![occupancy_grid](https://user-images.githubusercontent.com/83658560/224113730-060295bc-104b-4c03-aedf-8b9c7153cd7b.png)
 
 Enter the starting as goal point coordinates as shown below, don't put coordinates that would end up on obstacles
-
 ![terminal_screenshot](https://user-images.githubusercontent.com/83658560/219943849-a6565287-da28-412a-aaa6-1d8381c1a60c.png)
 
 After running the script we get:
-
-![path](https://user-images.githubusercontent.com/83658560/219960438-e7d92885-6ec2-40ff-b006-f97c95fe293f.png)
-
+![RRT_Algorithm](https://user-images.githubusercontent.com/83658560/224113898-400425ee-2370-4e71-b093-557bdf042f01.png)
 Here nodes highlighted by green and blue ring respectively are the start and goal, whereas the dotted green line gives the path found by the algorithm
 
 ## Eight puzzle solver using A* algorithm:
