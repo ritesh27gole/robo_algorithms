@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 class Node:
     def __init__(self, state, f = None, h = None):
@@ -97,6 +98,30 @@ def misplacedTileHeuristic(state):
     h = np.sum(inequality)
     return h
 
+def manhattanDistanceHeuristic(state):
+    h = 0
+    matrix = np.reshape(state, (3,3))
+    for i in range(0,3):
+        for j in range(0,3):
+            dividend = matrix[i][j] - 1
+            divisor = 3
+            x = int(dividend/divisor)
+            y = dividend - (divisor*x)
+            h += abs(i - x) + abs(j - y)
+    return h
+
+def eulerDistanceHeuristic(state):
+    h = 0
+    matrix = np.reshape(state, (3,3))
+    for i in range(0,3):
+        for j in range(0,3):
+            dividend = matrix[i][j] - 1
+            divisor = 3
+            x = int(dividend/divisor)
+            y = dividend - (divisor*x)
+            h += ((i - x)**2 + (j - y)**2)**(0.5)
+    return h
+
 def retracePath(Node_list):
     solution = []
     goal_node = Node_list[-1]
@@ -158,6 +183,7 @@ open.append(initial_node)
 closed = []
 
 k=0
+t1 = time.time()
 while (open[-1].state == goal_state).all() == False:
     previous_node = open[-1]
     closed.append(open.pop())
@@ -193,13 +219,18 @@ while (open[-1].state == goal_state).all() == False:
         if (flag_open == True) or (flag_closed == True):
             continue
         else:
-            h = misplacedTileHeuristic(current_state)
+            # h = misplacedTileHeuristic(current_state)
+            # h = manhattanDistanceHeuristic(current_state)
+            h = eulerDistanceHeuristic(current_state)
+
             f = g + h
             current_node = Node(current_state, f, h)
             current_node.parent = previous_node
             open.append(current_node)
     
     open = sorted(open, key= lambda x: (x.f, x.h), reverse=True)
+t2 = time.time()
 
 solution = retracePath(closed)
 solution_moves(solution)
+print("Time take to solve the puzzle: ", t2 - t1)
