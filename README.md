@@ -46,4 +46,8 @@ Here nodes highlighted by green and blue ring respectively are the start and goa
 
 ## Eight puzzle solver using A* algorithm:
 
-To be updated soon
+Comparison of different heuristics used:
+![Figure_1](https://user-images.githubusercontent.com/83658560/224112173-110c2ebc-870a-4845-a384-28b3f1e2525c.png)
+
+
+
