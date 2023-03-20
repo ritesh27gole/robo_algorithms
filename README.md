@@ -42,8 +42,11 @@ After running the script we get:
 Here nodes highlighted by green and blue ring respectively are the start and goal, whereas the dotted green line gives the path found by the algorithm
 
 ## Eight puzzle solver using A* algorithm:
+### Solvability
 
-Comparison of different heuristics used:
+We first find the amount of moves required to move the blank from position in initial state to position in goal state. We the find if the number of moves are even or odd. This is called the "parity" of the puzzle. Then we find the sum of total number of inversions and find whether it is even or odd, this is said to be the parity of initial state. If both the puzzle parity and initial state parity are same, that means the puzzle is solvable, otherwise it is not solvable.
+
+### Comparison of different heuristics used:
 ![Figure_1](https://user-images.githubusercontent.com/83658560/224112173-110c2ebc-870a-4845-a384-28b3f1e2525c.png)
 
 
